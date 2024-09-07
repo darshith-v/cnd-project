@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Spelling Correction</title>
+    <style>
+        /* Add some basic styling to make it more colorful and centered */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            text-align: center;
+            background-color: #f0f0f0; /* Light gray background */
+        }
+        
+        h1, h2 {
+            color: #00698f; /* Blue headings */
+        }
+        
+        form {
+            width: 50%; /* Make the form 50% of the screen width */
+            margin: 40px auto; /* Center the form horizontally */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        textarea, input[type="submit"] {
+            font-size: 16px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        textarea {
+            width: 100%; /* Make the textarea full width */
+            height: 200px;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50; /* Green button */
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #3e8e41; /* Darker green on hover */
+        }
+        
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI-Powered Spelling Correction</h1>
+    <form method="POST">
+        <textarea name="text" rows="10" cols="50" placeholder="Enter text here..."></textarea><br><br>
+        <input type="submit" value="Correct and Suggest">
+    </form>
+    {% if corrected_text %}
+        <h2>Corrected Text:</h2>
+        <p>{{ corrected_text }}</p>
+    {% endif %}
+    {% if ai_suggested_text %}
+        <h2>AI Suggested Text:</h2>
+        <p>{{ ai_suggested_text }}</p>
+    {% endif %}
+</body>
+</html>
