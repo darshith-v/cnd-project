@@ -40,25 +40,25 @@ Usage
 
 Docker Deployment
 1. Build the Docker image:
-   docker build -t ai-spelling-correction .
+   -docker build -t ai-spelling-correction .
 2. Run the Docker container:
-   docker run -p 5000:5000 ai-spelling-correction
+   -docker run -p 5000:5000 ai-spelling-correction
 
 Dependencies
 The project uses the following Python libraries:
 
-Flask==2.3.2
-textblob==0.15.3
-transformers==4.31.0
-torch==2.0.1
-numpy==1.24.4
+-Flask==2.3.2
+-textblob==0.15.3
+-transformers==4.31.0
+-torch==2.0.1
+-numpy==1.24.4
 
 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+-This project is licensed under the MIT License. See the LICENSE file for details.
 
 Acknowledgments
-TextBlob for spelling correction.
-Hugging Face Transformers for AI text generation.
+-TextBlob for spelling correction.
+-Hugging Face Transformers for AI text generation.
    
 5. Open your browser and navigate to http://127.0.0.1:5000.
 
